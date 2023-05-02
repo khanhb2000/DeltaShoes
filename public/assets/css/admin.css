@@ -1,0 +1,46 @@
+
+
+.admin table {
+    table-layout: fixed;
+    min-width: 200px;
+    overflow-x:scroll;
+}
+
+.admin a {
+    text-decoration: none;
+}
+
+.admin .menu a {
+    padding-left: 0;
+}
+
+.admin .description {
+    height: 200px;
+}
+
+.admin .table-editable input {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+}
+
+.admin .table-editable input:focus {
+    outline: 0;
+}
+
+.admin .form-select {
+    box-shadow: none;
+}
+
+.menu .list-group a {
+    color: black !important;
+}
+
+.menu .list-group-light .active {
+    background-color: #ffcccb;
+}
+
+.menu .list-group-light .active a {
+    color: white !important;
+}

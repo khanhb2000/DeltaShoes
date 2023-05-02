@@ -1,0 +1,486 @@
+﻿
+
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Dosis');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+
+}
+
+/* Structure containers */
+.wrapper {
+  flex: 1 0 auto;
+  /* This tells the container to take up the rest of the space, if there is any, and therefore moves the footer to the bottom. */
+}
+
+.main {
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1;
+  width: 800px;
+  display: block;
+  position: relative;
+}
+
+section {
+  margin-bottom: 4rem;
+  clear: both;
+}
+
+section h3 {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.twocolumn {
+  /* type of section */
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px dotted #ddd;
+}
+
+.onecolumn {
+  /* type of section */
+  column-count: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop {
+  /* special section class for the shop, grid structure */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-bottom: 4rem;
+  clear: both;
+}
+
+.product {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.productinfo {
+  flex: 1;
+  padding-left: 3rem;
+}
+
+.productpictures {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* SHOPPING CART CSS */
+.shoppingCart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 95%, 1);
+  border-radius: 25px;
+
+}
+
+.shoppingCart h2 {
+  margin: 3rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid white;
+}
+
+.shoppingCart>p {
+  margin: auto 3rem 1rem;
+}
+
+#clientInfo>p {
+  margin: auto 3rem 1rem;
+}
+
+.step {
+  color: white;
+  background-color: #EC4273;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.shoppingCart>form {
+  width: 100%;
+}
+
+.itemAdded {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.5rem 0.5rem;
+}
+
+.itemAdded:nth-child(even) {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
+
+#totalBar {
+  width: 100%;
+  border-top: 5px solid #EC4273;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#totalBar p {
+  display: inline;
+  margin: 0;
+  padding: 0rem 3rem 0.5rem;
+  font-weight: bold;
+  background: pink;
+}
+
+.itemDescription {
+  margin-left: 2rem;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemAdded h3 {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  margin: 0 auto 1rem;
+}
+
+h5 {
+  color: black;
+  background-color: none;
+  padding: 0.3rem 0.5rem;
+  margin: 2.5rem 0 0;
+  font-family: serif;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+h4:first-of-type {
+  margin: 0;
+}
+
+h4:last-of-type {
+  margin: 2.5rem 0 1rem;
+}
+
+.itemAdded>p {
+  margin: 0 auto;
+}
+
+.itemDescription h3 {
+  color: black;
+}
+
+.itemDescription p {
+  font-weight: bold;
+  color: #EC4273;
+}
+
+.itemAdded img {
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+}
+
+/*.input-number-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-number-group input[type=number]::-webkit-inner-spin-button,
+.input-number-group input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.input-number-group .input-group-button {
+  line-height: calc(80px/2 - 5px);
+}
+
+.input-number-group .input-number {
+  width: 80px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+  display: block;
+  margin: 0;
+}*/
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+.itemDescription input[type="number"] {
+  width: 50px;
+  height: 30px;
+  border: 0;
+  outline: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 1em;
+  color: rgb(225, 66, 66);
+  text-align: center;
+}
+
+.itemDescription label {
+  text-transform: uppercase;
+  font-size: smaller;
+  display: inline;
+}
+
+img {
+  /* image wrapped in a link (for shop) */
+  margin: 0;
+  width: 100%;
+
+}
+
+/* Headings and paragraphs */
+h2 {
+  font-family: 'Dosis', sans-serif;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: black;
+  text-align: left;
+}
+
+/*h3 {
+  /*mostly used in footer 
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  color: black;
+}*/
+
+p {
+  margin-bottom: 2rem;
+}
+
+address {
+  font-style: normal;
+}
+
+span {
+  /* product price */
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  margin: 1.3rem auto;
+  color: #EC4273;
+  display: block;
+}
+
+table {
+  color: black;
+  font-size: 0.9rem;
+  width: 100%;
+  /*font-variant: small-caps;*/
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+td,
+th {
+  background-color: hsla(0, 0%, 95%, 1);
+  padding: 0.2rem 0.5rem;
+}
+
+thead {
+  text-align: center;
+  font-variant: small-caps;
+}
+/*
+#checkoutSummary,
+#checkoutItems {
+  margin: 0;
+  border-collapse: collapse;
+}
+
+#checkoutSummary td,
+th {
+  border-bottom: 2px solid white;
+}
+
+#checkoutSummary th {
+  width: 150px;
+}
+
+#checkoutItems td {
+  background: white;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#checkoutItems th {
+  text-align: center;
+}
+
+#checkoutItems h3 {
+  margin: 0;
+  color: #777;
+}
+
+#finalSum {
+  border-top: 4px solid pink;
+}
+
+#preCheckout {
+  width: 15rem;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+  background: pink;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+}
+
+#preCheckout td {
+  background: pink;
+  color: #555;
+}
+
+#preCheckout th {
+  color: #EC4273;
+  background: pink;
+}
+*/
+
+
+@media (max-width: 991px) {
+  .main {
+    width: 100%;
+    margin: 0, 0px, 0, 0px;
+    padding: 0px, 0px, 0, 0px;
+  }
+}
+/*--------------------------*/
+#square {
+  width: 100px;
+  height: 100px;
+  background: white;
+}
+
+@media screen and (max-width: 600px) {
+  table#cart tbody td .form-control {
+    width: 20%;
+    display: inline !important;
+  }
+
+  .actions .btn {
+    width: 36%;
+    margin: 1.5em 0;
+  }
+
+  .actions .btn-info {
+    float: left;
+  }
+
+  .actions .btn-danger {
+    float: right;
+  }
+
+  table#cart thead {
+    display: none;
+  }
+
+  table#cart tbody td {
+    display: block;
+    padding: .6rem;
+    min-width: 320px;
+  }
+
+  table#cart tbody tr td:first-child {
+    background: #333;
+    color: #fff;
+  }
+
+  table#cart tbody td:before {
+    content: attr(data-th);
+    font-weight: bold;
+    display: inline-block;
+    width: 8rem;
+  }
+
+  table#cart tfoot td {
+    display: block;
+  }
+
+  table#cart tfoot td .btn {
+    display: block;
+  }
+
+}
+  .btn.btn-success.btn-block{
+    position: relative;
+    margin-top: 20px;
+    width: 40%;
+    height: 60px;
+    background-color: seagreen;
+  }
+/*</style>*/
+
+@media screen and (max-width: 600px) {
+  .order {
+    width: 20%;
+    display: none;
+  }
+.main{ 
+  width: 100%;
+}
+  .shoppingCart {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .order {
+    width: 100%;
+    display: inline !important;
+  }
+
+  .shoppingCart {
+    display: none;
+  }
+}
