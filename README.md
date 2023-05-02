@@ -1,1 +1,3 @@
-BTL LTW
+BTL LTW / 
+PHP language / 
+MVC architecture
